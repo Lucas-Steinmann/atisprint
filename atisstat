@@ -1,0 +1,6 @@
+#! /bin/bash
+
+USER=""
+HOST="i08fs1.informatik.kit.edu"
+
+ssh $USER@$HOST lpstat -a

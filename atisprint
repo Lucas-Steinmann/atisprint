@@ -1,0 +1,17 @@
+#! /bin/bash
+
+#+-------------------------------------------------------------------+
+#|                                                                   |
+#| Usage: atisprint PRINTERNAME FILE                                 |
+#| Copies the specified file to your atis account and prints it over |
+#| ssh                                                               |
+#|                                                                   |
+#+-------------------------------------------------------------------+
+
+USER=""
+HOST="i08fs1.informatik.kit.edu"
+UPLOADFOLDER="Dokumente/"
+
+
+scp $2 $USER@$HOST:$UPLOADFOLDER
+ssh $USER@$HOST lpr -P $1 $UPLOADFOLDER/$2
