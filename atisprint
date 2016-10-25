@@ -14,4 +14,4 @@ UPLOADFOLDER="Dokumente/"
 
 
 scp $2 $USER@$HOST:$UPLOADFOLDER
-ssh $USER@$HOST lpr -P $1 $UPLOADFOLDER/$2
+ssh $USER@$HOST lpr -P $1 "$UPLOADFOLDER/${2##*/}"
